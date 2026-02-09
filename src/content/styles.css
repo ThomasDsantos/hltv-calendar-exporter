@@ -1,0 +1,210 @@
+/* HLTV Calendar Exporter - Injected Styles */
+
+/* ===== Listing page: calendar + select buttons in .match-btn-wrapper ===== */
+
+/* Calendar add button - matches native .match-btn style */
+.hltv-cal-add-btn {
+  cursor: pointer;
+}
+
+.hltv-cal-add-btn:hover {
+  color: rgba(53, 53, 53, 1) !important;
+}
+
+/* Select/checkbox button - matches native .match-btn style */
+.hltv-cal-select-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.hltv-cal-checkbox {
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+  margin: 0;
+}
+
+/* ===== Dropdown menu (shared by listing + match page) ===== */
+
+.hltv-cal-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.hltv-cal-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 4px;
+  background: #1a1a2e;
+  border: 1px solid #333;
+  border-radius: 6px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  z-index: 10000;
+  min-width: 160px;
+  overflow: hidden;
+}
+
+.hltv-cal-dropdown-menu.show {
+  display: block;
+}
+
+.hltv-cal-dropdown-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  color: #e0e0e0;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  font-family: inherit;
+}
+
+.hltv-cal-dropdown-item:hover {
+  background: #2a2a4a;
+}
+
+.hltv-cal-dropdown-item svg {
+  width: 16px;
+  height: 16px;
+  opacity: 0.8;
+}
+
+/* ===== Match page: small inline button under the time ===== */
+
+.hltv-cal-match-inline {
+  display: block;
+  text-align: center;
+  margin-top: 4px;
+}
+
+.hltv-cal-match-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border: none;
+  border-radius: 3px;
+  background: none;
+  color: rgba(53, 53, 53, 0.6);
+  font-size: 11px;
+  cursor: pointer;
+  transition: color 0.15s ease;
+  font-family: inherit;
+}
+
+.hltv-cal-match-btn:hover {
+  color: rgba(53, 53, 53, 1);
+}
+
+.hltv-cal-match-btn svg {
+  width: 11px;
+  height: 11px;
+  fill: currentColor;
+}
+
+/* ===== Bulk export bar ===== */
+
+.hltv-cal-bulk-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #1a1a2e;
+  border-top: 1px solid #333;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 9999;
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.hltv-cal-bulk-bar.hidden {
+  display: none;
+}
+
+.hltv-cal-bulk-info {
+  color: #e0e0e0;
+  font-size: 14px;
+}
+
+.hltv-cal-bulk-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.hltv-cal-bulk-clear {
+  padding: 6px 12px;
+  background: transparent;
+  border: 1px solid #555;
+  border-radius: 4px;
+  color: #aaa;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.hltv-cal-bulk-clear:hover {
+  border-color: #888;
+  color: #fff;
+}
+
+.hltv-cal-bulk-export {
+  padding: 6px 12px;
+  background: linear-gradient(135deg, #2d6cdf 0%, #1e4fb0 100%);
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.hltv-cal-bulk-export:hover {
+  background: linear-gradient(135deg, #3a7cf0 0%, #2860c7 100%);
+}
+
+/* ===== Toast notification ===== */
+
+.hltv-cal-toast {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background: #2d6cdf;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 13px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  z-index: 10001;
+  animation: hltv-cal-toast-in 0.3s ease;
+}
+
+.hltv-cal-toast.success {
+  background: #28a745;
+}
+
+.hltv-cal-toast.error {
+  background: #dc3545;
+}
+
+@keyframes hltv-cal-toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HLTV Calendar Exporter</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <header class="popup-header">
+      <h1>HLTV Calendar Exporter</h1>
+    </header>
+
+    <main class="popup-content">
+      <section class="popup-section">
+        <h2>How to use</h2>
+        <ul class="instructions">
+          <li>Visit <a href="https://www.hltv.org/matches" target="_blank">hltv.org/matches</a></li>
+          <li>Click the calendar icon on any match to add it</li>
+          <li>Or select multiple matches and download a single .ics file</li>
+        </ul>
+      </section>
+
+      <section class="popup-section">
+        <h2>Settings</h2>
+
+        <div class="setting-row">
+          <label for="default-provider">Default calendar:</label>
+          <select id="default-provider">
+            <option value="unset">Choose each time</option>
+            <option value="ics">Download .ics</option>
+            <option value="google">Google Calendar</option>
+            <option value="outlook">Outlook</option>
+          </select>
+        </div>
+
+        <div class="setting-row">
+          <label for="outlook-variant">Outlook version:</label>
+          <select id="outlook-variant">
+            <option value="live">Outlook.com (Personal)</option>
+            <option value="office">Office 365 (Work)</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="popup-section">
+        <h2>Quick actions</h2>
+        <button id="open-hltv" class="action-btn">Open HLTV Matches</button>
+      </section>
+    </main>
+
+    <footer class="popup-footer">
+      <span>v1.0.0</span>
+      <a href="https://github.com/thdo/hltv-calendar-exporter" target="_blank">GitHub</a>
+    </footer>
+  </div>
+
+  <script type="module" src="popup.ts"></script>
+</body>
+</html>

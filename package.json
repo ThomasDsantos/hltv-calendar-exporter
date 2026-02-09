@@ -1,0 +1,16 @@
+{
+  "name": "hltv-calendar-exporter",
+  "version": "1.0.0",
+  "description": "Browser extension to export HLTV Counter-Strike matches to calendar providers",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build"
+  },
+  "devDependencies": {
+    "@crxjs/vite-plugin": "^2.0.0-beta.25",
+    "@types/chrome": "^0.0.268",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.11"
+  }
+}
